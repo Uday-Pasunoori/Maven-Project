@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test Suite" verbose="1" parallel="classes" thread-count="4" configfailurepolicy="continue">
+
+	<listeners>
+		<listener class-name="samplereporter.HTMLReporter" />
+		<listener class-name="utils.BaseTest" />
+	</listeners>
+	
+		<parameter name="os" value="windows" /> -->
+		<parameter name="os_version" value="VISTA" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="46.0.1" />
+		
+		<parameter name="expected_text" value="Persistent Systems"/>
+		
+
+		<classes>
+			<class name="uitests.LoginTest" />
+			<class name="uitests.SampleTestClass" />
+		</classes>
+
+</suite>
